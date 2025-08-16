@@ -204,6 +204,7 @@ function quizfun(){
             trueResult= 0
             totalresult=0
             percenttage=0
+            percent()
             quizfun()
             buttons.forEach(btn=>{
                 btn.style.backgroundColor="rgb(240, 240, 240)"
