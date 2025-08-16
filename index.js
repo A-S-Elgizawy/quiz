@@ -139,22 +139,27 @@ index= 0
 movenext = 0
 trueResult= 0
 totalresult=0
+    window.addEventListener("load", () => {
+      correct.load(); 
+      wrong.load(); 
+      mousClick.load(); 
+    });
 
 next.addEventListener("click",()=>{  
+    mousClick.play();
     move -= 100 
     additional -=60
     index++
     movenext++
-    mousClick.play();
     quizfun()
     
 })
     
 prev.addEventListener("click",()=>{
+    mousClick.play();
     move += 100 
     additional +=60
     index--
-    mousClick.play();
     quizfun()
 })
 
