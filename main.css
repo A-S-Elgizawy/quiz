@@ -55,7 +55,7 @@ body{
 
     border: 1px solid white;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem;
     font-family: Arial, Helvetica, sans-serif;
     /* position: relative; */
     overflow: hidden;
@@ -78,12 +78,18 @@ body{
     width: 100%;
     transition: 1s ease;
 }
+.question-total{
+    color: white;
+    margin: 0;
+    text-align: right;
+}
 .quiz .bar-quiz .question{
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
     margin-bottom: 1rem;
     /* color: rgb(0, 112, 218); */
     color: white;
+    text-align: center;
 
 }
 .quiz .bar-quiz .answers button{
@@ -151,6 +157,7 @@ body{
               cursor: pointer;
               transition: .5s ease;
               z-index: 100;
+              margin: 1rem;
               /* background-color: green; */
             }
         
@@ -168,16 +175,16 @@ body{
             .number{
                 font-family: Arial, Helvetica, sans-serif;
                 color: white;
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             .start{
-                    padding: 1.5rem  2rem;
-                    font-size: 1.5rem;
+                    padding: 1.2rem  2rem;
+                    font-size: 1.2rem;
                     border-radius: 10px;
                     cursor: pointer;
                     border: 1px solid white;
                     background-color: rgb(2, 132, 253);
                     margin-top: 1.5rem;
                     color: white;
-                    width: 80%;
+                    width: 70%;
             }

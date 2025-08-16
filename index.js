@@ -126,6 +126,10 @@ const buttons = document.querySelectorAll('.button')
 const scoreNum = document.querySelector('.scoreNum')
 const number = document.querySelector('.number')
 const circle = document.querySelector('.circle')
+const correct = document.querySelector('.correctAn')
+const wrong = document.querySelector('.wrong')
+const mousClick = document.querySelector('.mousClick')
+
 
 
 
@@ -141,6 +145,7 @@ next.addEventListener("click",()=>{
     additional -=60
     index++
     movenext++
+    mousClick.play();
     quizfun()
     
 })
@@ -149,6 +154,7 @@ prev.addEventListener("click",()=>{
     move += 100 
     additional +=60
     index--
+    mousClick.play();
     quizfun()
 })
 
@@ -182,6 +188,7 @@ function quizfun(){
     }
     if(start){
         start.addEventListener("click",()=>{
+            mousClick.play();
            resultEle.style.display="none"
            examination.style.display="block"
            move = 0
@@ -200,7 +207,7 @@ function quizfun(){
 
             //    console.log(trueResult);
                
-               scoreNum.innerText= `Your score: ${trueResult} of 7`
+               scoreNum.innerText= `Your score: ${trueResult} of  7`
                 const resultPercent = (trueResult / totalresult) * 100;
                 number.innerText = `${Math.floor(resultPercent)}%`
                 circle.style.setProperty("--progress", `${Math.floor(resultPercent)}%`);
@@ -213,9 +220,11 @@ answer1.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{ 
         if(event.target.innerText === "الشيخ سعود"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
-        trueResult++   
+            trueResult++   
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer1.children).forEach(btnTrue=>{
                 if(btnTrue.innerText === "الشيخ سعود"){
                     btnTrue.style.backgroundColor="rgb(145, 255, 145)"
@@ -235,8 +244,10 @@ answer2.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "ياسمين"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer2.children).forEach(btn=>{
                 if(btn.innerText === "ياسمين"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -256,8 +267,10 @@ answer3.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "الزرافة / بهلول"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer3.children).forEach(btn=>{
                 if(btn.innerText === "الزرافة / بهلول"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -277,8 +290,10 @@ answer4.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "ادم / دومى"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer4.children).forEach(btn=>{
                 if(btn.innerText === "ادم / دومى"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -297,8 +312,10 @@ answer5.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "ابو دماغ ضربه"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer5.children).forEach(btn=>{
                 if(btn.innerText === "ابو دماغ ضربه"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -318,8 +335,10 @@ answer6.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "حموكشة"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
+            wrong.play()
              Array.from(answer6.children).forEach(btn=>{
                 if(btn.innerText === "حموكشة"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -338,9 +357,11 @@ answer7.querySelectorAll("button").forEach(btn=>{
         if(event.target.innerText === "لا شئ مما سبق"){
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
+            correct.play()
         }else{
             btn.style.backgroundColor="rgb(255, 149, 149)"
-             Array.from(answer6.children).forEach(btn=>{
+            wrong.play()
+             Array.from(answer7.children).forEach(btn=>{
                 if(btn.innerText === "لا شئ مما سبق"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
                 }
