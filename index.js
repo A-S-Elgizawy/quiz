@@ -139,6 +139,7 @@ index= 0
 movenext = 0
 trueResult= 0
 totalresult=0
+percenttage = 0
     window.addEventListener("load", () => {
       correct.load(); 
       wrong.load(); 
@@ -189,7 +190,7 @@ function quizfun(){
     if(index == 7 && next.innerText == "finish"){
            resultEle.style.display="flex"
            examination.style.display="none"
-
+            percent()
     }
     if(start){
         start.addEventListener("click",()=>{
@@ -208,17 +209,31 @@ function quizfun(){
                 btn.disabled = false
             })
         })
-    }
-
-            //    console.log(trueResult);
-               
-               scoreNum.innerText= `Your score: ${trueResult} of  7`
-                const resultPercent = (trueResult / totalresult) * 100;
-                number.innerText = `${Math.floor(resultPercent)}%`
-                circle.style.setProperty("--progress", `${Math.floor(resultPercent)}%`);
-
+    }           
 }
 quizfun()
+function percent(){
+
+                scoreNum.innerText= `Your score: ${trueResult} of  7`
+                const resultPercent = (trueResult / totalresult) * 100;
+
+                interval = setInterval(() => {
+                    percent()
+                    if(percenttage < resultPercent - 1){
+                            percenttage++ 
+                            console.log(percenttage);
+                            console.log(resultPercent);
+                            
+                    }else{
+                        clearInterval(interval)
+                    }
+                }, 100);
+                
+                number.innerText = `${Math.floor(percenttage)}%`
+                
+                
+                circle.style.setProperty("--progress", `${Math.floor(percenttage)}%`);
+}
 
 const answer1 = document.querySelector(".answers1")
 answer1.querySelectorAll("button").forEach(btn=>{
