@@ -213,25 +213,19 @@ function quizfun(){
 }
 quizfun()
 function percent(){
-
                 scoreNum.innerText= `Your score: ${trueResult} of  7`
                 const resultPercent = (trueResult / totalresult) * 100;
 
                 interval = setInterval(() => {
                     percent()
                     if(percenttage < resultPercent - 1){
-                            percenttage++ 
-                            console.log(percenttage);
-                            console.log(resultPercent);
-                            
+                            percenttage++        
                     }else{
                         clearInterval(interval)
                     }
                 }, 100);
                 
                 number.innerText = `${Math.floor(percenttage)}%`
-                
-                
                 circle.style.setProperty("--progress", `${Math.floor(percenttage)}%`);
 }
 
