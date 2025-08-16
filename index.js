@@ -133,13 +133,13 @@ const mousClick = document.querySelector('.mousClick')
 
 
 
-move = 0
-additional = 0
-index= 0
-movenext = 0
-trueResult= 0
-totalresult=0
-percenttage = 0
+let move = 0
+let additional = 0
+let index= 0
+let movenext = 0
+let trueResult= 0
+let totalresult=0
+let percenttage = 0
     window.addEventListener("load", () => {
       correct.load(); 
       wrong.load(); 
@@ -192,6 +192,7 @@ function quizfun(){
            examination.style.display="none"
             percent()
     }
+
     if(start){
         start.addEventListener("click",()=>{
             mousClick.play();
@@ -201,9 +202,9 @@ function quizfun(){
            additional = 0
             index= 0
             movenext = 0
-            trueResult= 0
-            totalresult=0
-            percenttage=0
+            trueResult = 0
+            totalresult = 0
+            percenttage = 0
             percent()
             quizfun()
             buttons.forEach(btn=>{
@@ -211,7 +212,8 @@ function quizfun(){
                 btn.disabled = false
             })
         })
-    }           
+    } 
+
 }
 quizfun()
 
@@ -219,18 +221,19 @@ function percent(){
                 scoreNum.innerText= `Your score: ${trueResult} of  7`
                 const resultPercent = (trueResult / totalresult) * 100;
 
-                number.innerText = `${percenttage}%`
-                circle.style.setProperty("--progress", `${percenttage}%`);
-
-                interval = setInterval(() => {
+                interval = setTimeout(() => {
                     percent()
                     if(percenttage < parseInt(resultPercent)){
                             percenttage++               
                     }else{
-                        clearInterval(interval)
-                    }
-                }, 100);                
+                        clearTimeout(interval)
+                    } 
+                }, 10);   
+                
+                number.innerText = `${percenttage}%`
+                circle.style.setProperty("--progress", `${percenttage}%`);
 }
+
 
 const answer1 = document.querySelector(".answers1")
 answer1.querySelectorAll("button").forEach(btn=>{
