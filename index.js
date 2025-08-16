@@ -203,6 +203,7 @@ function quizfun(){
             movenext = 0
             trueResult= 0
             totalresult=0
+            percenttage=0
             quizfun()
             buttons.forEach(btn=>{
                 btn.style.backgroundColor="rgb(240, 240, 240)"
@@ -212,21 +213,22 @@ function quizfun(){
     }           
 }
 quizfun()
+
 function percent(){
                 scoreNum.innerText= `Your score: ${trueResult} of  7`
                 const resultPercent = (trueResult / totalresult) * 100;
 
+                number.innerText = `${percenttage}%`
+                circle.style.setProperty("--progress", `${percenttage}%`);
+
                 interval = setInterval(() => {
                     percent()
-                    if(percenttage < resultPercent - 1){
-                            percenttage++        
+                    if(percenttage < parseInt(resultPercent)){
+                            percenttage++               
                     }else{
                         clearInterval(interval)
                     }
-                }, 100);
-                
-                number.innerText = `${Math.floor(percenttage)}%`
-                circle.style.setProperty("--progress", `${Math.floor(percenttage)}%`);
+                }, 100);                
 }
 
 const answer1 = document.querySelector(".answers1")
@@ -364,6 +366,7 @@ answer6.querySelectorAll("button").forEach(btn=>{
         totalresult++
     })
 })
+
 const answer7 = document.querySelector(".answers7")
 answer7.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
