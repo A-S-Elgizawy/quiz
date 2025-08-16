@@ -219,12 +219,12 @@ const answer1 = document.querySelector(".answers1")
 answer1.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{ 
         if(event.target.innerText === "الشيخ سعود"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++   
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer1.children).forEach(btnTrue=>{
                 if(btnTrue.innerText === "الشيخ سعود"){
                     btnTrue.style.backgroundColor="rgb(145, 255, 145)"
@@ -242,12 +242,12 @@ answer2.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
         if(event.target.innerText === "ياسمين"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer2.children).forEach(btn=>{
                 if(btn.innerText === "ياسمين"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -265,12 +265,12 @@ answer3.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
         if(event.target.innerText === "الزرافة / بهلول"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer3.children).forEach(btn=>{
                 if(btn.innerText === "الزرافة / بهلول"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -288,12 +288,12 @@ answer4.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
         if(event.target.innerText === "ادم / دومى"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer4.children).forEach(btn=>{
                 if(btn.innerText === "ادم / دومى"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -310,12 +310,12 @@ const answer5 = document.querySelector(".answers5")
 answer5.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{   
         if(event.target.innerText === "ابو دماغ ضربه"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer5.children).forEach(btn=>{
                 if(btn.innerText === "ابو دماغ ضربه"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -333,12 +333,12 @@ answer6.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
         if(event.target.innerText === "حموكشة"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer6.children).forEach(btn=>{
                 if(btn.innerText === "حموكشة"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
@@ -355,12 +355,12 @@ answer7.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
         if(event.target.innerText === "لا شئ مما سبق"){
+            correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
-            correct.play()
         }else{
-            btn.style.backgroundColor="rgb(255, 149, 149)"
             wrong.play()
+            btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer7.children).forEach(btn=>{
                 if(btn.innerText === "لا شئ مما سبق"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
