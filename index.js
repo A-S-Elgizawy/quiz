@@ -238,7 +238,7 @@ function percent(){
 const answer1 = document.querySelector(".answers1")
 answer1.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{ 
-        if(event.target.innerText === "الشيخ سعود"){
+        if(event.target.innerText === "الشيخ سعيد"){
             correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++   
@@ -246,7 +246,7 @@ answer1.querySelectorAll("button").forEach(btn=>{
             wrong.play()
             btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer1.children).forEach(btnTrue=>{
-                if(btnTrue.innerText === "الشيخ سعود"){
+                if(btnTrue.innerText === "الشيخ سعيد"){
                     btnTrue.style.backgroundColor="rgb(145, 255, 145)"
                 }
             })
@@ -352,7 +352,7 @@ const answer6 = document.querySelector(".answers6")
 answer6.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
-        if(event.target.innerText === "حموكشة"){
+        if(event.target.innerText === "البغل"){
             correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
@@ -360,7 +360,7 @@ answer6.querySelectorAll("button").forEach(btn=>{
             wrong.play()
             btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer6.children).forEach(btn=>{
-                if(btn.innerText === "حموكشة"){
+                if(btn.innerText === "البغل"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
                 }
              })
@@ -375,7 +375,7 @@ const answer7 = document.querySelector(".answers7")
 answer7.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",(event)=>{
           
-        if(event.target.innerText === "لا شئ مما سبق"){
+        if(event.target.innerText === "جميع ما سبق"){
             correct.play()
             btn.style.backgroundColor="rgb(145, 255, 145)"
             trueResult++ 
@@ -383,7 +383,7 @@ answer7.querySelectorAll("button").forEach(btn=>{
             wrong.play()
             btn.style.backgroundColor="rgb(255, 149, 149)"
              Array.from(answer7.children).forEach(btn=>{
-                if(btn.innerText === "لا شئ مما سبق"){
+                if(btn.innerText === "جميع ما سبق"){
                     btn.style.backgroundColor="rgb(145, 255, 145)"
                 }
              })
